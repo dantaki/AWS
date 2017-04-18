@@ -7,7 +7,7 @@ def init_bash():
 	This function will generate a a bash script to run when the
 	AWS spot instance is initalized
 
-	The commands below are for a CentOS image. The directories for your image
+	The commands below are for a Ubuntu/Debian (I think) image. The directories for your image
 	might differ from the ones below
 	'''
 	commands=[ 
@@ -23,7 +23,7 @@ def init_bash():
 		# 'wget https://s3.amazonaws.com/1kg-gtcnv/config -T 10 -t 5 -O /home/admin/config',
 		# 'mv /home/admin/config /home/admin/.aws/', # .aws is the config file for AWS CLI
 		
-		# The binaries below were saved in a CentOS image we created for our analysis
+		# The binaries below were saved in a Linux image we created for our analysis
 		# 'export PATH=/home/admin/bin/bedtools2/bin:$PATH',
 		# 'export PATH=/home/admin/bin/samtools-1.2:$PATH'
 		 ]
@@ -34,7 +34,7 @@ def init_json(base64_command,out):
 	
 	This function creats a JSON file containing information for initalizing an AWS instance 
 	
-	The information in the JSON file will be different for your tasks.
+	You will have to edit some of the values for your AWS acount
 	'''
 	ofh = open(out+'.json','w') 
 	json_out= {
